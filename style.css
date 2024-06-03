@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(at top center,hsl(214, 47%, 23%), hsl(237, 49%, 15%))
+}
+
+.wrapper {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border: solid hsl(217, 16%, 45%) 2px;
+    border-radius: 10px;
+    margin: 1em auto 2em;
+    width: 90%;
+}
+
+#title {
+    width: min-content;
+    color: white;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+#scoreboard {
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.5em 2em;
+}
+
+#scoreboard > h2 {
+    color: hsl(229, 64%, 46%);
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+#scoreboard > span {
+    color: darkslategray;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 1.2em;
+    width: 70%;
+    margin: 0 auto 2em;
+}
+
+.result-container {
+    display: grid;
+    place-items: center;
+    grid-template: 20px 1fr / repeat(3, 1fr);
+    row-gap: 1em;
+    color: white;
+}
+
+.rules-container {
+    color: white;
+    margin-left: 2em;
+}
+
+.rules-container > ol {
+    padding-left: 1em;
+}
+
+.rules-container > ol > li {
+    padding: 1em 0 0
+}
+
+.hide {
+    display: none;
+}
+
+#you-picked {
+    grid-column: 1;
+}
+
+#house-picked {
+    grid-column: 3;
+}
+
+.choice {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+}
+
+#paper {
+    background-image: url(images/icon-paper.svg);
+    border: solid hsl(230, 89%, 62%) 20px;
+}
+
+#scissors {
+    background-image: url(images/icon-scissors.svg);
+    border: solid hsl(39, 89%, 49%) 20px;
+}
+
+#rock {
+    background-image: url(images/icon-rock.svg);
+    border: solid hsl(349, 71%, 52%) 20px;
+    margin: 0 auto;
+}
+
+.connector {
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    width: 150px;
+    height: 10px;
+    background-color: hsl(238, 48%, 12%);
+}
+
+.two {
+    transform: rotate(60deg);
+    top: 65%;
+    left: 26%
+}
+
+.three {
+    transform: rotate(120deg);
+    top: 65%;
+    left: 45%
+}
+
+.button-container {
+    margin-left: 90%
+}
+
+#rules {
+    background-color: transparent;
+    padding: 0.5em 1em;
+    border: solid white 1px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+#replay {
+    background-color: white;
+    color: hsl(229, 64%, 46%);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+#result-span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#result {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#result > h2 {
+    text-align: center
+}
+
+@media (min-width: 511px) {
+    .choice:hover {
+        box-shadow: 0 0 50px rgb(5, 15, 68);
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 510px) {
+    .wrapper {
+        width: 300px;
+    }
+
+    .header {
+        padding: 0.5rem;
+        width: 295px;
+        margin-bottom: 2em;
+    }
+
+    #scoreboard {
+        padding: 0.5em;
+    }
+
+    .flex-container {
+        width: 250px;
+    }
+
+    .choice {
+        width: 100px;
+        height: 100px;
+    }
+
+    #house-choice {
+        grid-column-start: 3;
+    }
+
+    #paper {
+        border: solid hsl(230, 89%, 62%) 10px;
+    }
+    
+    #scissors {
+        border: solid hsl(39, 89%, 49%) 10px;
+    }
+    
+    #rock {
+        border: solid hsl(349, 71%, 52%) 10px;
+        margin: 0 auto;
+    }
+
+    .two {
+        left: 17%;
+    }
+
+    .three {
+        left: 36%
+    }
+
+    #rules {
+        padding: 0.75em 2.5em
+    }
+
+    .button-container {
+        margin: 0 32%;
+    }
+
+    .result-container {
+        grid-template-rows: 1fr 20px 1fr;
+        grid-template-columns: 1fr 0.5fr 1fr;
+        row-gap: 2em;
+    }
+
+    #you-picked, #house-picked {
+        grid-row-start: 2;
+    }
+
+    #result {
+        grid-row-start: 3;
+        grid-column: 1 / 4;
+        justify-content: center;
+    }
+
+    .rules-container > ol {
+        margin-bottom: 3em
+    }
+     
+}
+
+

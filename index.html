@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body>
+  <main>
+    <div class="wrapper">
+      <div class="header">
+        <div id="title"><h1>ROCK PAPER SCISSORS</h1></div>
+        <div id="scoreboard"><h2>Score</h2><span id="score">0</span></div>
+      </div>
+      <div class="flex-container">
+        <div class="choice" id="paper"></div>
+        <div class="choice" id="scissors"></div>
+        <div class="choice" id="rock"></div>
+        <div class="connector one"></div>
+        <div class="connector two"></div>
+        <div class="connector three"></div>
+      </div>
+      <div class="result-container hide">
+        <p id="you-picked">You Picked</p>
+        <p id="house-picked">House Picked</p>
+        <div id="you-choice"></div>
+        <div id="result">
+          <h2><span id="result-span"></span></h2>
+          <button id="replay">PLAY AGAIN</button>
+        </div>
+        <div id="house-choice"></div>
+      </div>  
+      <div class="rules-container hide">
+        <h2>Rules:</h2>
+        <ol>
+          <li>Rock beats scissors</li>
+          <li>Scissors beats paper</li>
+          <li>Paper beats rock</li>
+        </ol>
+      </div>
+      <div class="button-container">
+        <button id="rules">Rules</button>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
