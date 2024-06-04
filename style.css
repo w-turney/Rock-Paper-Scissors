@@ -130,7 +130,7 @@ body {
 
 .connector {
     position: absolute;
-    top: 50%;
+    top: 47%;
     z-index: -1;
     width: 150px;
     height: 10px;
